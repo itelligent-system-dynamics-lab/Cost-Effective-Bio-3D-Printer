@@ -1,0 +1,26 @@
+Replication Steps
+1-Build or modify the printer frame.
+2-Install the syringe extrusion mount.
+3-Assemble the pneumatic system.
+4-Wire the Arduino Nano controller.
+5-Connect the ADS1115, MCP4725, LCD, relays, and sensors.
+6-Update printer and Arduino Firmware.
+7-Calibrate the pressure sensors.
+Test solenoid operation.
+Run low-pressure extrusion tests.
+
+
+See Readme.md for required components
+
+1-Assemble printer
+  -Ensure printer function as intended without any modifications
+  -Confirm that all motion Axis move correctly
+  -Remove filament extruder copenents such as extruder motor and hotend
+    -In the case of the Sovol SV08 the extruder conteol board will need to be kept along with eddy current probe
+  -Modify Klipper firmware and remove(comment) control over hotend,hotplate and extruder motor to avoid errors while printing
+  - Test printing without extrusion components, make sure no errors occur start to finish
+
+2-Install Syringe Mount
+  -Using stl file 3d print a new mount for 10mL syringe and eddy current probe
+  -New mount will remain on the same printer carriage
+  -Connect pneumatic tubing to using barrel adapter
