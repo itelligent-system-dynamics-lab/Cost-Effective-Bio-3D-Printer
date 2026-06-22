@@ -1,3 +1,7 @@
+/*
+Upload code to Arduino Nano R4 using Arduino IDE
+*/
+
 #include <Wire.h>
 #include <Adafruit_ADS1X15.h>
 #include <MCP4725.h>
