@@ -13,6 +13,7 @@ The system includes:
      -Sovol SV08 in this case
      -If printer doesn't already have klipper installed extra materials will be needed-see Klipper.md
 - Pneumatic syringe extrusion system
+- 10mL syring pneumatic barrel adapter
 - ControlAir Type 500-X I/P transducer
 - Arduino Nano R4
 - DC-DC Step-Down Buck Converter
