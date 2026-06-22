@@ -24,3 +24,14 @@ See Readme.md for required components
   -Using stl file 3d print a new mount for 10mL syringe and eddy current probe
   -New mount will remain on the same printer carriage
   -Connect pneumatic tubing to using barrel adapter
+  -See Pneumatics.md for the rest of pnematic setup
+
+3-Assemble electronics
+See Readme.md and Wiring.md for Arduino NAno R4 pinout
+See Wiring.md for wiring instructions
+
+4-Control panel assembly
+-3d print mount for control panel using provided stl
+-Mount will go in the same position as the existing screen
+  -Left side of mount is for existing display and the right side mounts a interchangeable control panel
+  -Interchangeable panel provided allows for a .96" OLED display, a toggle switch and a potentiometer.
