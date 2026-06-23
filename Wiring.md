@@ -1,15 +1,6 @@
 
-ADS1115 Pinout
-Vdd- 5V Power Line
-Gnd- Gnd Line
-SCL- Arduino SCL
-SDA- Arduino SDA
-A0- Sensor 2
-A1-Voltage reference- 5V Power Line
-A2- 10K Ohm Potentiometer
-A3-Sensor 1
+
 <img width="750" height="499" alt="image" src="https://github.com/user-attachments/assets/c476966f-7700-467b-a974-8fc766f9e6bc" />
-## 4 Relay Module Wiring diagram
 ## 4. Relay Module Wiring Diagram
 
 The relay module controls the pneumatic solenoids using Arduino digital pins D5, D6, and D7.
