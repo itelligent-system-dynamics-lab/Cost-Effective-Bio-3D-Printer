@@ -40,8 +40,8 @@ Each solenoid should have a flyback diode installed across the solenoid coil.
 | Mode switch        |           D9 | `MODE_SWITCH_PIN` | LOW = manual mode, HIGH = auto mode         |
 | Plug/socket detect |          D10 | `PLUG_PIN`        | Uses internal pull-up during plug challenge |
 | Status LED         | Built-in LED | `LED_PIN`         | Blinks every 250 ms                         |
-| I2C SDA            |           A4 | SDA               | Shared by OLED, ADS1115, and MCP4725        |
-| I2C SCL            |           A5 | SCL               | Shared by OLED, ADS1115, and MCP4725        |
+| I2C SDA            |           A4 | SDA               | Shared                                      |
+| I2C SCL            |           A5 | SCL               | Shared                                      |
 | USB Serial         |     USB port | `Serial`          | Communicates at 115200 baud                 |
 
 <img width="411" height="308" alt="image" src="https://github.com/user-attachments/assets/4ee92056-6c39-4d84-969b-b0280d408e01" />
@@ -54,17 +54,40 @@ Each solenoid should have a flyback diode installed across the solenoid coil.
 | A2              | Potentiometer           | `potValue`    | Manual pressure input |
 | A3              | 100 psi pressure sensor | `Pressure1`   | Main pressure sensor  |
 
-## I2C Device Addresses
-
-| Device               | I2C Pins |              Address | Purpose                                |
-| -------------------- | -------- | -------------------: | -------------------------------------- |
-| SSD1306 OLED display | A4/A5    | Default hardware I2C | Displays pressure and DAC output       |
-| ADS1115 ADC          | A4/A5    |       Usually `0x48` | Reads sensors, potentiometer, and Vref |
-| MCP4725 DAC          | A4/A5    |               `0x60` | Sends analog voltage command           |
 
 <img width="588" height="276" alt="image" src="https://github.com/user-attachments/assets/4c28a15d-9e6d-4b1d-9c53-967cda5464da" />
-MCP4725 Pinout
+## 5. MCP4725 DAC Wiring Diagram
 
-<img width="411" height="308" alt="image" src="https://github.com/user-attachments/assets/42eaab3d-0e8b-4266-a2ac-147a54756882" />
-XTR111 Pinout
+The MCP4725 digital-to-analog converter is used to create the analog voltage command for the pneumatic pressure control system.
 
+| MCP4725 Pin | Connects To          | Function                      |
+| ----------- | -------------------- | ----------------------------- |
+| VCC         | 5V power rail        | Powers the MCP4725 module     |
+| GND         | Ground line          | Common ground reference       |
+| SDA         | Arduino A4           | Shared                        |
+| SCL         | Arduino A5           | Shared                        |
+| OUT / Vout  | Current driver input | Analog voltage command output |
+
+### Output Signal Purpose
+
+The MCP4725 output is used to send a variable analog voltage command from the Arduino to the pressure control circuit.
+
+
+
+
+
+
+
+
+
+
+
+<img width="1128" height="894" alt="image" src="https://github.com/user-attachments/assets/695e3a51-9019-49f3-8489-06d22fe49363" />
+##XTR111 Pinout
+| MCP4725 Pin | Connects To          | Function                      |
+| ----------- | -------------------- | ----------------------------- |
+| Vin         | MCP4725 Vout         | Powers the MCP4725 module     |
+| GND         | Ground line          | Common ground reference       |
+| VCC         | 24V Power Rail       | Shared                        |
+| Vout        | I/P Transducer       | Shared                        |
+| GND         | Ground line          | Analog voltage command output |
