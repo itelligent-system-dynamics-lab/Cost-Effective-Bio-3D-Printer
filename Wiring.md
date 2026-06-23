@@ -1,4 +1,4 @@
-<img width="411" height="308" alt="image" src="https://github.com/user-attachments/assets/4ee92056-6c39-4d84-969b-b0280d408e01" />
+
 ADS1115 Pinout
 Vdd- 5V Power Line
 Gnd- Gnd Line
@@ -35,9 +35,6 @@ Each solenoid should have a flyback diode installed across the solenoid coil.
 | Gate solenoid      | Diode connected across gate solenoid coil      |
 | Isolation solenoid | Diode connected across isolation solenoid coil |
 
-For a DC solenoid, connect the diode in parallel with the solenoid coil. The striped side of the diode should face the positive supply side, and the non-striped side should face the ground or switched side.
-
-Do not place the diode in series with the relay. The diode is used to protect the circuit from voltage spikes when the solenoid turns off.
 
 
 <img width="750" height="422" alt="image" src="https://github.com/user-attachments/assets/535cfba7-1747-4271-842d-1eb75576e504" />
@@ -56,6 +53,7 @@ Do not place the diode in series with the relay. The diode is used to protect th
 | I2C SCL            |           A5 | SCL               | Shared by OLED, ADS1115, and MCP4725        |
 | USB Serial         |     USB port | `Serial`          | Communicates at 115200 baud                 |
 
+<img width="411" height="308" alt="image" src="https://github.com/user-attachments/assets/4ee92056-6c39-4d84-969b-b0280d408e01" />
 ## ADS1115 Channel Mapping
 
 | ADS1115 Channel | Connected Device        | Code Variable | Notes                 |
