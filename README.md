@@ -53,13 +53,16 @@ The system is divided into four main subsystems:
 
 | Function | Arduino Pin / Channel |
 |---|---|
-| SoftwareSerial RX | D2 |
-| SoftwareSerial TX | D3 |
 | Mode switch | D9 |
 | Plug/socket detect | D10 |
-| Purge relay | D11 |
-| Isolation relay | D12 |
+| Vent relay | D5 |
+| Gate relay | D6 |
+| Isolator relay | D7 |
 | Status LED | Built-in LED |
+| Purge relay | D5 |
+| Isolation relay | A4 |
+| SDA | A5 |
+| SCL | D6 |
 | Sensor 1, 100 psi | ADS1115 A3 |
 | Sensor 2, 15 psi | ADS1115 A0 |
 | Potentiometer/variator | ADS1115 A2 |
