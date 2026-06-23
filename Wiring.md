@@ -27,17 +27,23 @@ A3-Sensor 1
 <img width="750" height="422" alt="image" src="https://github.com/user-attachments/assets/535cfba7-1747-4271-842d-1eb75576e504" />
 Arduino Nano R4 Pinout
 | Function | Arduino Pin / Channel |
-| Function | Pin |
-|---|---:|
-| Vent relay | D5 |
-| Gate relay | D6 |
-| Isolation relay | D7 |
+|---|---|
 | Mode switch | D9 |
 | Plug/socket detect | D10 |
+| Vent relay | D5 |
+| Gate relay | D6 |
+| Isolator relay | D7 |
 | Status LED | Built-in LED |
-| I2C SDA | A4 |
-| I2C SCL | A5 |
-| USB Serial communication | USB port, 115200 baud |
+| Purge relay | D5 |
+| Isolation relay | A4 |
+| SDA | A5 |
+| SCL | D6 |
+| Sensor 1, 100 psi | ADS1115 A3 |
+| Sensor 2, 15 psi | ADS1115 A0 |
+| Potentiometer/variator | ADS1115 A2 |
+| Reference voltage | ADS1115 A1 |
+| LCD I2C address | 0x27 |
+| MCP4725 DAC address | 0x60 |
 
 <img width="588" height="276" alt="image" src="https://github.com/user-attachments/assets/4c28a15d-9e6d-4b1d-9c53-967cda5464da" />
 MCP4725 Pinout
