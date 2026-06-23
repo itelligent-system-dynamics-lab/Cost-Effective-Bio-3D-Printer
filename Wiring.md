@@ -10,17 +10,35 @@ A2- 10K Ohm Potentiometer
 A3-Sensor 1
 <img width="750" height="499" alt="image" src="https://github.com/user-attachments/assets/c476966f-7700-467b-a974-8fc766f9e6bc" />
 ## 4 Relay Module Wiring diagram
-|Function|Pin|
-|---|---|
-| VCC | 5V Power Rail |
-| Gnd |Gnd Line |
-| IN1 |Arduino D5 |
-| IN2 |Arduino D6 |
-| IN3 |Arduino D7 |
-| R1 Normally Closed | Vent Solenoid |
-| R2 Normally Closed | Gate Solenoid |
-| R3 Normally closed | Isolator Solenoid |
-##
+## 4. Relay Module Wiring Diagram
+
+The relay module controls the pneumatic solenoids using Arduino digital pins D5, D6, and D7.
+
+| Relay Module Connection | Connects To        | Function                             |
+| ----------------------- | ------------------ | ------------------------------------ |
+| VCC                     | 5V power rail      | Relay module logic power             |
+| GND                     | Ground line        | Common ground                        |
+| IN1                     | Arduino D5         | Vent relay control                   |
+| IN2                     | Arduino D6         | Gate relay control                   |
+| IN3                     | Arduino D7         | Isolation relay control              |
+| Relay 1 NC terminal     | Vent solenoid      | Vent solenoid switching contact      |
+| Relay 2 NC terminal     | Gate solenoid      | Gate solenoid switching contact      |
+| Relay 3 NC terminal     | Isolation solenoid | Isolation solenoid switching contact |
+
+### Flyback Diode Protection
+
+Each solenoid should have a flyback diode installed across the solenoid coil.
+
+| Solenoid           | Diode Placement                                |
+| ------------------ | ---------------------------------------------- |
+| Vent solenoid      | Diode connected across vent solenoid coil      |
+| Gate solenoid      | Diode connected across gate solenoid coil      |
+| Isolation solenoid | Diode connected across isolation solenoid coil |
+
+For a DC solenoid, connect the diode in parallel with the solenoid coil. The striped side of the diode should face the positive supply side, and the non-striped side should face the ground or switched side.
+
+Do not place the diode in series with the relay. The diode is used to protect the circuit from voltage spikes when the solenoid turns off.
+
 
 <img width="750" height="422" alt="image" src="https://github.com/user-attachments/assets/535cfba7-1747-4271-842d-1eb75576e504" />
 ##Arduino Nano R4 Pinout
