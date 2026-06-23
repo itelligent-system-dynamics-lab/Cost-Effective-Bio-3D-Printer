@@ -11,6 +11,7 @@ A3-Sensor 1
 <img width="750" height="499" alt="image" src="https://github.com/user-attachments/assets/c476966f-7700-467b-a974-8fc766f9e6bc" />
 4 Relay Module Wiring diagram
 |Function|Pin|
+|---|---|
 |VCC|5V Power Rail|
 |Gnd|Gnd Line|
 |IN1|Arduino D5|
