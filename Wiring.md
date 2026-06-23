@@ -71,23 +71,26 @@ The MCP4725 digital-to-analog converter is used to create the analog voltage com
 ### Output Signal Purpose
 
 The MCP4725 output is used to send a variable analog voltage command from the Arduino to the pressure control circuit.
-
-
-
-
-
-
-
-
-
+### Notes
 
 
 <img width="1128" height="894" alt="image" src="https://github.com/user-attachments/assets/695e3a51-9019-49f3-8489-06d22fe49363" />
-##XTR111 Pinout
-| MCP4725 Pin | Connects To          | Function                      |
-| ----------- | -------------------- | ----------------------------- |
-| Vin         | MCP4725 Vout         | Powers the MCP4725 module     |
-| GND         | Ground line          | Common ground reference       |
-| VCC         | 24V Power Rail       | Shared                        |
-| Vout        | I/P Transducer       | Shared                        |
-| GND         | Ground line          | Analog voltage command output |
+## XTR111 Pinout
+
+The XTR111 section converts the analog output signal from the MCP4725 into a control signal for the I/P transducer. In this setup, the MCP4725 provides the command signal, the XTR111 circuit is powered from the 24V rail, and the output goes to the pneumatic I/P transducer.
+
+| XTR111 Label | Connects To    | Description                                                   |
+| ------------ | -------------- | ------------------------------------------------------------- |
+| Vin          | MCP4725 Vout   | Receives the analog voltage command signal from the MCP4725   |
+| GND          | Ground line    | Common ground reference for the control circuit               |
+| VCC          | 24V power rail | Supplies power to the XTR111/current control circuit          |
+| Vout         | I/P transducer | Sends the control output signal to the I/P transducer         |
+| GND          | Ground line    | Shared ground connection for the analog output/control signal |
+
+### Notes
+
+* The MCP4725 output connects to `Vin`.
+* The 24V supply connects to `VCC` and homes from printer power supply.
+* The I/P transducer connects to `Vout`.
+* All grounds should be connected to the same ground reference.
+* Ensure proper current output prior to connecting transducer.
