@@ -27,24 +27,36 @@ A3-Sensor 1
 
 <img width="750" height="422" alt="image" src="https://github.com/user-attachments/assets/535cfba7-1747-4271-842d-1eb75576e504" />
 ##Arduino Nano R4 Pinout
-| Function | Arduino Pin / Channel |
-|---|---|
-| Mode switch | D9 |
-| Plug/socket detect | D10 |
-| Vent relay | D5 |
-| Gate relay | D6 |
-| Isolator relay | D7 |
-| Status LED | Built-in LED |
-| Purge relay | D5 |
-| Isolation relay | A4 |
-| SDA | A5 |
-| SCL | D6 |
-| Sensor 1, 100 psi | ADS1115 A3 |
-| Sensor 2, 15 psi | ADS1115 A0 |
-| Potentiometer/variator | ADS1115 A2 |
-| Reference voltage | ADS1115 A1 |
-| LCD I2C address | 0x27 |
-| MCP4725 DAC address | 0x60 |
+## Arduino Nano Pinout
+
+| Function           |  Arduino Pin | Code Name         | Notes                                       |
+| ------------------ | -----------: | ----------------- | ------------------------------------------- |
+| Vent relay         |           D5 | `RELAY_VENT`      | Controls vent/purge relay                   |
+| Gate relay         |           D6 | `RELAY_GATE`      | Controls gate relay                         |
+| Isolation relay    |           D7 | `RELAY_ISO`       | Controls isolation relay                    |
+| Mode switch        |           D9 | `MODE_SWITCH_PIN` | LOW = manual mode, HIGH = auto mode         |
+| Plug/socket detect |          D10 | `PLUG_PIN`        | Uses internal pull-up during plug challenge |
+| Status LED         | Built-in LED | `LED_PIN`         | Blinks every 250 ms                         |
+| I2C SDA            |           A4 | SDA               | Shared by OLED, ADS1115, and MCP4725        |
+| I2C SCL            |           A5 | SCL               | Shared by OLED, ADS1115, and MCP4725        |
+| USB Serial         |     USB port | `Serial`          | Communicates at 115200 baud                 |
+
+## ADS1115 Channel Mapping
+
+| ADS1115 Channel | Connected Device        | Code Variable | Notes                 |
+| --------------- | ----------------------- | ------------- | --------------------- |
+| A0              | 15 psi pressure sensor  | `Pressure2`   | Low-pressure sensor   |
+| A1              | Reference voltage       | `vrefValue`   | Reads Vref            |
+| A2              | Potentiometer           | `potValue`    | Manual pressure input |
+| A3              | 100 psi pressure sensor | `Pressure1`   | Main pressure sensor  |
+
+## I2C Device Addresses
+
+| Device               | I2C Pins |              Address | Purpose                                |
+| -------------------- | -------- | -------------------: | -------------------------------------- |
+| SSD1306 OLED display | A4/A5    | Default hardware I2C | Displays pressure and DAC output       |
+| ADS1115 ADC          | A4/A5    |       Usually `0x48` | Reads sensors, potentiometer, and Vref |
+| MCP4725 DAC          | A4/A5    |               `0x60` | Sends analog voltage command           |
 
 <img width="588" height="276" alt="image" src="https://github.com/user-attachments/assets/4c28a15d-9e6d-4b1d-9c53-967cda5464da" />
 MCP4725 Pinout
