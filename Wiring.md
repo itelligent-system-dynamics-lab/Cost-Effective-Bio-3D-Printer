@@ -18,11 +18,8 @@ A3-Sensor 1
 | IN2 |Arduino D6 |
 | IN3 |Arduino D7 |
 | R1 Normally Closed | Vent Solenoid |
-|  -Diode coming fron Gnd going into Relay |
 | R2 Normally Closed | Gate Solenoid |
-|  -Diode coming fron Gnd going into Relay |
 | R3 Normally closed | Isolator Solenoid |
-|  -Diode coming fron Gnd going into Relay |
 ##
 
 <img width="750" height="422" alt="image" src="https://github.com/user-attachments/assets/535cfba7-1747-4271-842d-1eb75576e504" />
