@@ -10,20 +10,33 @@ A2- 10K Ohm Potentiometer
 A3-Sensor 1
 <img width="750" height="499" alt="image" src="https://github.com/user-attachments/assets/c476966f-7700-467b-a974-8fc766f9e6bc" />
 4 Relay Module Wiring diagram
-VCC-5V Power Rail
-Gnd-Gnd Line
-IN1-Arduino D5
-IN2-Arduino D6
-IN3-Arduino D7
-R1 Normally Closed-Vent Solenoid
-  -Diode coming fron Gnd going into Relay
-R2 Normally Closed-Gate Solenoid
-  -Diode coming fron Gnd going into Relay
-R3 Normally closed-Isolator Solenoid
-  -Diode coming fron Gnd going into Relay
+|Function|Pin|
+|VCC|5V Power Rail|
+|Gnd|Gnd Line|
+|IN1|Arduino D5|
+|IN2|Arduino D6|
+|IN3|Arduino D7|
+|R1 Normally Closed|Vent Solenoid|
+|  -Diode coming fron Gnd going into Relay|
+|R2 Normally Closed| Gate Solenoid|
+|  -Diode coming fron Gnd going into Relay|
+|R3 Normally closed|Isolator Solenoid
+|  -Diode coming fron Gnd going into Relay|
 
 <img width="750" height="422" alt="image" src="https://github.com/user-attachments/assets/535cfba7-1747-4271-842d-1eb75576e504" />
 Arduino Nano R4 Pinout
+| Function | Arduino Pin / Channel |
+| Function | Pin |
+|---|---:|
+| Vent relay | D5 |
+| Gate relay | D6 |
+| Isolation relay | D7 |
+| Mode switch | D9 |
+| Plug/socket detect | D10 |
+| Status LED | Built-in LED |
+| I2C SDA | A4 |
+| I2C SCL | A5 |
+| USB Serial communication | USB port, 115200 baud |
 
 <img width="588" height="276" alt="image" src="https://github.com/user-attachments/assets/4c28a15d-9e6d-4b1d-9c53-967cda5464da" />
 MCP4725 Pinout
