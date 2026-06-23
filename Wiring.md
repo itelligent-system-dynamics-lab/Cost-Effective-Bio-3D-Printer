@@ -9,7 +9,7 @@ A1-Voltage reference- 5V Power Line
 A2- 10K Ohm Potentiometer
 A3-Sensor 1
 <img width="750" height="499" alt="image" src="https://github.com/user-attachments/assets/c476966f-7700-467b-a974-8fc766f9e6bc" />
-##4 Relay Module Wiring diagram
+## 4 Relay Module Wiring diagram
 |Function|Pin|
 |---|---|
 | VCC | 5V Power Rail |
@@ -23,6 +23,7 @@ A3-Sensor 1
 |  -Diode coming fron Gnd going into Relay |
 | R3 Normally closed | Isolator Solenoid |
 |  -Diode coming fron Gnd going into Relay |
+##
 
 <img width="750" height="422" alt="image" src="https://github.com/user-attachments/assets/535cfba7-1747-4271-842d-1eb75576e504" />
 ##Arduino Nano R4 Pinout
