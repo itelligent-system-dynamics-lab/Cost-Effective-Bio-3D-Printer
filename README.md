@@ -80,8 +80,7 @@ The system is divided into four main subsystems:
 
 ```text
 firmware/   Arduino and printer firmware notes
-hardware/   BOM, wiring diagrams, CAD, and schematics
+hardware/   BOM, wiring diagrams, CAD, schematics, Abstract, project summary, and references
 docs/       Assembly, calibration, operation, and troubleshooting guides
 images/     Photos and diagrams of the completed system
-data/       Example pressure logs and test data
-research/   Abstract, project summary, and references
+
