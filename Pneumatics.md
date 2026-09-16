@@ -31,7 +31,7 @@ The pneumatic system supplies and regulates pressurized air used for material ex
 
 **[Insert image of completed pneumatic system here]**
 
-The following steps describe the assembly of the pneumatic distribution system. Refer to the system image for the orientation of the fittings and valves.
+The following steps describe the assembly of the pneumatic distribution system. Refer to the system image for the orientation of the fittings and valves. Assembly does not need to be exact so long components are placed in the correct order; orientation was selected to reduce sysem size.
 
 ### 1. Assemble the Main Distribution Fitting
 
@@ -110,7 +110,7 @@ Verify that all threaded connections are secure before supplying compressed air.
 
 Once assembled, the general air path is:
 
-```text
+
 ## Air Flow Direction
 
 The pneumatic system supplies compressed air to the ControlAir Type 500X,
@@ -150,21 +150,19 @@ to provide a local visual indication of pressure.
 ### Pressure Regulation and Control
 
 The **ControlAir Type 500X I/P Pressure Transducer** regulates the compressed
-air according to the electrical control signal supplied by the control
-system.
+air according to the signal supplied by the control system.
 
-The three **normally closed (NC) solenoid valves** provide electrically
+The three **normally closed solenoid valves** provide electrically
 controlled routing of the regulated air to the pneumatic outputs. When a
-solenoid is energized, its corresponding pneumatic path is opened; when
-de-energized, the valve returns to its normally closed state.
+solenoid is energized, its corresponding pneumatic path is opened.
 
 > **Note:** The exact function of each solenoid output depends on the
 > pneumatic connection to the syringe/extrusion assembly. Refer to the
 > pneumatic assembly image and electrical wiring documentation for the
 > corresponding valve connections.
-```
 
-The **ControlAir Type 500X** regulates the incoming compressed air according to its electrical control signal. The solenoid valves then provide electrically controlled routing of the regulated air to the appropriate pneumatic outputs.
+
+The **ControlAir Type 500X** regulates the compressed air according to its control signal. The solenoid valves then provide electrically controlled routing of the regulated air to the appropriate pneumatic outputs.
 
 ---
 
@@ -172,7 +170,7 @@ The **ControlAir Type 500X** regulates the incoming compressed air according to 
 
 Before operating the pneumatic system:
 
-* Verify that all NPT fittings are fully threaded and properly sealed.
+* Verify that all fittings are fully threaded and properly sealed.
 * Confirm that all tubing connections are secure.
 * Verify that the solenoid valves are installed in the correct orientation.
 * Confirm that the pressure sensors are connected to the intended measurement points.
