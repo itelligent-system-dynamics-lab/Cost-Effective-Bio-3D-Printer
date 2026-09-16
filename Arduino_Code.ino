@@ -1,5 +1,5 @@
 /*
-Upload code to Arduino Nano R4 using Arduino IDE
+Upload code to Arduino Nano R4 using Arduino IDE and import following libraries
 */
 
 #include <Wire.h>
