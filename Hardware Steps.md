@@ -80,6 +80,8 @@ The electronics system includes:
 - Pressure sensors
 - Other required sensors and control components
 
+Use the provided STL file to mount components, mount will go into the T-slot extrusion on the underside of the printer, use image provided as reference
+
 ---
 
 ## 4. Assemble Control Panel
